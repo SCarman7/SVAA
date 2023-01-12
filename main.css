@@ -1,0 +1,277 @@
+/*General*/
+
+#home li::before {
+  content: counter(step-counter);
+  font-size: .65em;
+  font-weight: 300;
+  padding: 2px 6px;
+  margin:  0 18px 0 0;
+  border-radius: 3px;
+  background:#8c2696;
+  line-height: 1em;
+}
+
+/* Base Styles-----------*/
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(30deg, rgb(167, 69, 129), rgb(97, 97, 168), rgb(97,69,129));
+    margin: 50px auto;
+    padding: 0 20px;
+    font:lem/1.25 "Helvetica Neue", Helvetics, Arial, Sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height:1.75em;
+  }
+
+  .row{
+    flex: 1;
+  }
+
+a{
+    Text-decoration:none;
+    Color:blue;
+}
+
+H1{
+    Color:rgb(116, 28, 119);
+    Letter-spacing:2px;
+}
+
+H2{
+    Color:rgb(116, 28, 119);
+    Letter-spacing:2px;
+}
+
+H3{
+    Color:rgb(43, 43, 109);
+    Letter-spacing:2px;
+}
+.header, .nav {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .header{
+    justify-content: space-between;
+  }
+  /* ---- Page Elements ---- */
+
+.logo {
+	width: 132px;
+}
+.headline {
+	margin-bottom: 0;
+}
+.feat-img {
+	border-radius: 5px;
+}
+
+.tagline {
+  margin-bottom: 0;
+  line-height:1.75em;
+}
+  /* Psuedo Classes--------*/
+
+  a:link {
+    color:rgb(173, 114, 173);
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: rgb(125, 26, 138);
+  }
+  
+  a:hover {
+    color: rgba(89, 5, 105, 0.4);
+  }
+  
+  a:active {
+    color: rgb(7, 21, 58);
+  }
+
+  /*Main Styles------*/  
+
+  .intro {
+    font-size: 1.25em; /* 20px/16px */
+    line-height: 1.6;  
+  }
+  
+  .main-header{
+    background-color:rgb(80, 5, 67);
+    padding: top 3.5;
+    background-repeat: no-repeat;
+    background-position:left;
+    }
+
+    .title{
+        color:rgb(167, 36, 167);
+        font-size:1.625rem;
+        display: center;
+        font-style: italic, helvetica; 
+    }
+    
+    .primary-content,
+    .main-header,
+    .main-footer{
+        text-align:center;
+    
+    }
+  .main-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom: 10px solid #4a3488;
+  }
+  
+  .t-border {
+    border-top: 2px solid #4a3488;
+  }
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #cc07f3;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+/* Layout Styles ------------------ */
+
+.primary-content, 
+.secondary-content {
+  width: 60%;
+  margin: auto;
+}
+
+.div,
+.wrap{
+  min-height:calc(100vh-592x);
+}
+
+.container{
+ padding-left: 1em;
+ padding-right: 1em;
+}
+
+.name,
+.main-nav,
+.main-nav li{
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.name{
+  width: 240px;
+  margin-right: 150px;
+}
+
+.header,
+.img{
+align-items: center;
+border-radius: 25px;
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .35em;
+	padding-bottom: .35em;
+}
+.banner,
+.main-footer {
+  text-align: center;
+}
+
+.main-footer {
+  padding: 2em 0;
+  margin-top: 30px;
+}
+
+/*----Dropdown Button----*/
+
+.dropbtn{
+  background:#1b072e;
+  color:white;
+  padding:16px;
+  font-size: 14px;
+  border: none;
+}
+
+/*Container <div> positioning*/
+
+.dropdown{
+  position:relative;
+  display:inline-block;
+}
+
+/*Drop Content that is hidden*/
+.dropdown-content{
+  display: none;
+  right: 0;
+  background-color: #5f3488;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba (0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/*links in dropdown*/
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;}
+
+/*links in dropdown hover change color*/
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/*Show dropdown menu on hover*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Show dropdown color change when menu content is shown*/
+.dropdown:hover .dropbtn {
+  background-color: #ad2e74;
+}
+
+/*Media Queries-----------*/
+
+@media (min-width:769px) {
+
+  .wrap{
+    min-height: calc(100vh - 592px);
+  }
+
+.container{
+  width: 70%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+	.main-header,
+	.row,
+  .footer-inner{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	.tagline {
+		font-size: 1.4em;
+	}
+}
